@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GAPS</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+
+</head>
+<body>
+
+  <section class="container col-lg-12 col-md-12">
+
+    <h1>Edit your Posts here</h1>
+
+    <div>
+          <div class="row">
+
+            <form class="right btn btn-filled" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
+              <button type="submit">Delete</button>
+            </form>
+
+            <br>
+
+            <form class="form-inline text-center" method="POST" action="/<%= post._id %>?_method=UPDATE" >
+              Autor:
+              <input class="form-control" type="text" value="<%= post.author %>" name="author"><br>
+              Title:
+              <input class="form-control" type="text" value="<%= post.title %>" name="title"><br>
+              Date:
+              <input class="form-control" type="text" value="<%= post.date %>" name="date"><br>
+              Text:
+              <input class="form-control" type="text" value="<%= post.text %>" name="text">
+              <br><br>
+
+              <input class="right btn btn-filled" type="submit" value=" Summit Changes ">
+            </form>
+
+          </div>
+    </div>
+
+  </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</body>
+</html>

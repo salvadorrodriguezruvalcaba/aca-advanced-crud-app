@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GAPS</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+
+</head>
+<body>
+
+  <section class="container col-lg-12 col-md-12">
+    <h1>BLOG</h1>
+    <br>
+
+    <% posts.forEach(function(post) { %>
+      <!-- <div class="col-lg-6 col-md-6 col-sm-3 col-xs-3"> -->
+        <h2><%= post.title %></h2>
+        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-8">
+          <p>By: <%= post.author %></p>
+          <p>Date: <%= post.date %></p>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+          <img alt="img" class="client-img-box" src="../img/salvador_photo.jpg">
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <p>Text</p>
+          <div class="box-text">
+            <p><%= post.text %></p>
+          </div>
+        </div>
+      <!-- </div> -->
+    <% }) %>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</body>
+</html>

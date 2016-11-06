@@ -1,0 +1,63 @@
+h1, h2, h3{
+  text-align: center;
+}
+h3{
+  color: red;
+}
+
+.box-text{
+  height: 100px;
+  background-color: #EEEEEE;
+  outline: 1px black solid;
+}
+
+.client-img-box{
+  /*outline: 1px red solid;*/
+  height: 100px;
+}
+.client-img-box img{
+  padding-bottom: 0px;
+  width: 100%;
+  float: right;
+}
+
+.right{
+  float: right;
+}
+.left{
+  float: left;
+}
+.btn-filled {
+    background: #91a05c;
+    color: white;
+}
+
+.pForm {
+  width: 50px;
+}
+.box_left {
+  width: 40%;
+  background-color: #EEEEEE;
+  outline: 1px black solid;
+  /*margin: 20px;*/
+}
+
+.box_right {
+  width: 25%;
+  background-color: #EEEEEE;
+  text-align: center;
+  outline: 1px black solid;
+  /*margin: 20px;*/
+}
+
+.tdName {
+  text-align: left;
+  /*padding: 50px;*/
+}
+
+.tdAttendent {
+  text-align: center;
+
+  /*padding: 50px;*/
+  color: Blue;
+}

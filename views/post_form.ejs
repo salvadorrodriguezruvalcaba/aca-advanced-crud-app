@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GAPS</title>
+
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700'>
+  <link rel="stylesheet" type="text/css" href="../css/app.css">
+
+</head>
+<body>
+
+  <section class="container col-lg-12 col-md-12">
+
+    <h1>Register your New Posts</h1>
+
+    <div>
+
+        <form class="form-inline text-center" action="/posts" method="POST">
+          Autor:
+          <input class="form-control" type="text" placeholder="Author Name Here" name="author"><br>
+          Title:
+          <input class="form-control" type="text" placeholder="Add a Title Here" name="title"><br>
+          Date:
+          <input class="form-control" type="text" placeholder="Today's Date" name="date"><br>
+          Text:
+          <input class="form-control" type="text" placeholder="Post Content Goes Here" name="text">
+          <br><br>
+          <input class="btn btn-filled" type="submit" value=" Summit Your New Post ">
+        </form>
+
+    </div>
+
+  </section>
+
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+</body>
+</html>
