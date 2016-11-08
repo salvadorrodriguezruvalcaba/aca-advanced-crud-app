@@ -7,8 +7,8 @@ const methodOverride = require('method-override');
 const posts = require('./routes/posts');
 
 // Set up database,  TODO: You need to write the line to connect to the mongo database
-// const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/blog-list');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/blog-list');
 
 // Create our instance of our app
 const app = express();

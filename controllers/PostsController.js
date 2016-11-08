@@ -1,9 +1,8 @@
 const PostModel = require('../models/PostModel.js');
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/blog-list');
 mongoose.Promise = global.Promise;
 
-module.exports =  {
+const PostsController =  {
   list: function( req, res, next) {
     PostModel.find().exec()
       .then(posts => res.render('posts', {posts}))
@@ -22,16 +21,18 @@ module.exports =  {
    },
 
   create: function (req, res, next) {
-       new PostModel({
+       const post = new PostModel({
              _id: req.body.id,
              title : req.body.title,
              author : req.body.author,
              date : req.body.date,
              text : req.body.text
-       }).save()
+       })
+       post.save()
        .then(res.redirect('/posts'))
        .catch(err => next(err));
      },
+
 
    edit_form: function(req, res, next) {
       PostModel.findById({ _id: req.params.id }).exec()
@@ -40,13 +41,14 @@ module.exports =  {
     },
 
   update: function(req, res, next) {
-    PostModel.findByIdAndUpdate({ _id: req.params.id }, {
+    PostModel.findByIdAndUpdate(req.params.id, {
       author: req.body.author,
       title: req.body.title,
       date: req.body.date,
       text: req.body.text
-    }, { new: true }).exec()
+    }, { new: true , runValidators: true }).exec()
     // .then(posts => res.render('post_edit_form', {posts})) // then(posts => res.json(posts))
+    // .then(posts => res.render('posts', { posts }))
     .then(res.redirect('/posts'))
     .catch(err => next(err))
   },
@@ -59,3 +61,5 @@ module.exports =  {
   }
 
 };
+
+module.exports = PostsController
