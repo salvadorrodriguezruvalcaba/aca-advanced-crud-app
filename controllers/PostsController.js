@@ -11,7 +11,7 @@ const PostsController =  {
 
   view: function( req, res, next) {
     PostModel.find({_id: req.params.id}).exec()
-      .then(posts => res.render('post', {posts}))  // res.json(posts))
+      .then(posts => res.render('post', {posts})) 
       .catch(err => next(err));
   },
 
@@ -22,7 +22,6 @@ const PostsController =  {
 
   create: function (req, res, next) {
        const post = new PostModel({
-             _id: req.body.id,
              title : req.body.title,
              author : req.body.author,
              date : req.body.date,

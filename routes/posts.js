@@ -21,7 +21,6 @@ router.get('/:id', PostsController.view )
 router.get('/:id/edit', PostsController.edit_form )
 router.put('/:id', PostsController.update )
 
-
 /* DELETE  eradicate */
 router.delete('/:id', PostsController.delete )
 

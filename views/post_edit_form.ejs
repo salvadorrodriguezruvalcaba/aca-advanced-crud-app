@@ -14,12 +14,11 @@
 </head>
 <body>
 
-  <section class="container col-lg-12 col-md-12">
+    <section class="container col-lg-12 col-md-12">
 
-    <h1>Edit your Posts here</h1>
+        <h1>Edit your Posts here</h1>
 
-    <div>
-          <div class="row">
+        <!-- <div> -->
 
             <form class="right btn btn-filled" method="POST" action="/posts/<%= post._id %>?_method=DELETE">
               <button type="submit">Delete</button>
@@ -41,13 +40,12 @@
               <input class="right btn btn-filled" type="submit" value=" Submit Changes ">
             </form>
 
-          </div>
-    </div>
+      <!-- </div> -->
 
-  </section>
+    </section>
 
-  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
 </body>
 </html>
